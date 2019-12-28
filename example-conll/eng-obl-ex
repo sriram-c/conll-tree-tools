@@ -1,8 +1,0 @@
-1	She	_	PRP	PRP	_	2	nsubj	_	_
-2	left	_	VBD	VBD	_	0	root	_	_
-3	a	_	DT	DT	_	4	det	_	_
-4	note	_	NN	NN	_	2	dobj	_	_
-5	on	_	IN	IN	_	7	case	_	_
-6	the	_	DT	DT	_	7	det	_	_
-7	table	_	NN	NN	_	2	nmod	_	_
-
