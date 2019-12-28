@@ -1,0 +1,19 @@
+1	Today	today	NOUN	NN	_	4	nmod:tmod	_	_
+2	we	we	PRON	PRP	_	4	nsubj	_	_
+3	will	will	AUX	MD	_	4	aux	_	_
+4	study	study	VERB	VB	_	0	root	_	_
+5	a	a	DET	DT	_	6	det	_	_
+6	type	type	NOUN	NN	_	4	dobj	_	_
+7	of	of	ADP	IN	_	9	case	_	_
+8	intelligent	intelligent	ADJ	JJ	_	9	amod	_	_
+9	agent	agent	NOUN	NN	_	6	nmod	_	_
+10	which	which	PRON	WDT	_	13	dobj	_	_
+11	we	we	PRON	PRP	_	13	nsubj	_	_
+12	will	will	AUX	MD	_	13	aux	_	_
+13	call	call	VERB	VB	_	6	acl:relcl	_	_
+14	a	a	DET	DT	_	15	det	_	_
+15	goal	goal	NOUN	NN	_	13	dobj	_	_
+16	directed	direct	VERB	VBN	_	15	acl	_	_
+17	agent	agent	NOUN	NN	_	16	dobj	_	_
+18	.	.	PUNCT	.	_	4	punct	_	_
+

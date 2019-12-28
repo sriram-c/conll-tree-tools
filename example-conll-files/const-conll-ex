@@ -1,0 +1,1 @@
+(ROOT (S (NP (PRP We)) (ADVP (RB also)) (VP (VBP have) (NP (NP (NN software) (NNS agents) (CC or) (NNS softbots)) (SBAR (WHNP (WDT that)) (S (VP (VBP have) (NP (NP (NP (DT some) (NNS functions)) (PP (IN as) (NP (NNS sensors)))) (CC and) (NP (NP (DT some) (NNS functions)) (PP (IN as) (NP (NNS actuators)))))))))) (. .)))
