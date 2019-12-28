@@ -44,3 +44,4 @@ To convert constituency original to indexed oneline format
 
 sh constituency-index.sh const-conll-ex
 
+---
