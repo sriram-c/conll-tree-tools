@@ -5,7 +5,7 @@ def parenthetic_contents(string,sen_len):
     stack = []
     stack_wd = []
     i = 0
-    j = sen_len
+    j = sen_len+1
     count = 0
     count_wd = 1
     sent_dic = {}
@@ -41,14 +41,16 @@ def parenthetic_contents(string,sen_len):
                 wd2 = stack_wd.pop()
                 wd3 = stack_wd[-1]
                 if(re.search('[0-9]',wd1)):
-                    sent_dic[j]=wd2+'\t'+wd3
+                    #sent_dic[j]=wd2+'\t'+wd3
+                    sent_dic[j]=wd1+'_'+wd2+'\t'+wd3
                     j += 1
 
                 else:
-                    sent_dic[count_wd]=wd2+'\t'+wd3
+                    sent_dic[count_wd]=wd1+'_'+wd2+'\t'+wd3
                     count_wd += 1
         else:
-            if(re.match('NP|VP|PP|ADJP|ADVP|SBAR|ROOT|S',wd)):
+            #http://www.surdeanu.info/mihai/teaching/ista555-fall13/readings/PennTreebankConstituents.html
+            if(re.match(r'^NP|WHNP|VP|PP|WHPP|ADJP|WHADJP|ADVP|WHAVP|X|SBAR|NAC|CONJP|FRAG|INTJ|LST|NAC|NX|QP|PRC|PRN|PRT|QP|RRC|UCP|ROOT|S$',wd)):
                     stack_wd.append(wd+str(count))
                     count += 1
             else:
@@ -62,7 +64,7 @@ with open(sys.argv[1]) as f:
 
 
 
-no_wds = 1
+no_wds = 0
 for sent in sents:
 
     for wd in sent.split():
@@ -97,11 +99,17 @@ for sent in sents:
         pos_val = sent_dic[key].split('\t')[0]
         head_val = sent_dic[key].split('\t')[1].strip()
 
-        if(head_val != 'ROOT0'):
-            print(idx,'\t',pos_val,'\t_','\t_','\t_','\t_\t',hd[head_val],'\tmother','\t',str(hd[head_val])+':mother','\t_')
+        if(len(pos_val.split('_')) > 1):
+            word = pos_val.split('_')[0]
+            pos = pos_val.split('_')[1]
         else:
-            print(idx,'\t',pos_val,'\t_','\t_','\t_','\t_\t0','\tmother','\t','0:mother','\t_')
+            word = '_'
+            pos = pos_val.split('_')[0]
+
+
+        if(head_val != 'ROOT0'):
+            print(idx,'\t',word,'\t',pos,'\t_','\t_','\t_','\t_\t',hd[head_val],'\tmother','\t',str(hd[head_val])+':mother','\t_')
+        else:
+            print(idx,'\t',word,'\t',pos,'\t_','\t_','\t_','\t_\t0','\tmother','\t','0:mother','\t_')
 
 print('\n')
-
-   
