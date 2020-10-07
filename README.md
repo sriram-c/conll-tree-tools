@@ -1,3 +1,9 @@
+Finding Largest NP|PP|SBAR|S from a sentence
+
+sh run-find-chunks.sh file
+
+
+
 # conll-tree-tools
 To Run:
 
