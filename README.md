@@ -3,7 +3,12 @@
 ```
 sh run-find-chunks.sh file
 ```
+The file should be the penn tree parse in one line as given in the below example.
 
+```
+ROOT (S (S (NP (DT The) (JJ key) (NN difference)) (VP (VBZ is) (SBAR (IN that) (S (NP (DT an) (JJ explicit) (NN query)) (VP (VBZ is) (ADJP (JJ missing))))))) (CC and) (S (ADVP (RB instead)) (NP (PRP we)) (VP (MD can) (ADVP (RB only)) (VP (VB use) (NP (NP (JJ past) (NML (NN purchase) (CC and) (NN viewing)) (NNS decisions)) (PP (IN of) (NP (DT the) (NN user)))) (S (VP (TO to) (VP (VB predict) (NP (JJ future) (NML (NN viewing) (CC and) (NN purchase)) (NNS habits)))))))) (. .)))
+
+```
 
 # conll-tree-tools
 
