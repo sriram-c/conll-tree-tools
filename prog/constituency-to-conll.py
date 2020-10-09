@@ -50,7 +50,7 @@ def parenthetic_contents(string,sen_len):
                     count_wd += 1
         else:
             #http://www.surdeanu.info/mihai/teaching/ista555-fall13/readings/PennTreebankConstituents.html
-            if(re.match(r'^NP|WHNP|VP|PP|WHPP|ADJP|WHADJP|ADVP|WHAVP|X|SBAR|NAC|CONJP|FRAG|INTJ|LST|NAC|NX|QP|PRC|PRN|PRT|QP|RRC|UCP|ROOT|S$',wd)):
+            if(re.match(r'^NP|WHNP|VP|PP|WHPP|ADJP|WHADJP|ADVP|WHAVP|X|SBAR|NAC|NML|CONJP|FRAG|INTJ|LST|NAC|NX|QP|PRC|PRN|PRT|QP|RRC|UCP|ROOT|S$',wd)):
                     stack_wd.append(wd+str(count))
                     count += 1
             else:
