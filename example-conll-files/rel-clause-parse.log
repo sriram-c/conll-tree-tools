@@ -1,0 +1,7 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Parsing file: /home/sriram/largest-chunk/conll-tree-tools/example-conll-files/rel-clause
+Parsing [sent. 1 len. 27]: It is those templates which make deployment of machine learning in practice easy and our discussion will largely focus on a choice set of such problems .
+Parsed file: /home/sriram/largest-chunk/conll-tree-tools/example-conll-files/rel-clause [1 sentences].
+Parsed 27 words in 1 sentences (46.08 wds/sec; 1.71 sents/sec).
