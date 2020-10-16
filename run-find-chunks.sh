@@ -1,9 +1,8 @@
 pres_path=`pwd`
-parser_path='/home/sriram/alignment/anusaaraka/Parsers/stanford-parser/stanford-parser-4.0.0'
-cp $1 $parser_path/.
-cd $parser_path
+parser_path=`echo $HOME_anu_test/Parsers/stanford-parser/stanford-parser-4.0.0`
 
-java -mx200m -cp ./*:  edu.stanford.nlp.parser.lexparser.LexicalizedParser -retainTMPSubcategories -outputFormat "oneline"   edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz $* 1> $1-parsed.out 2>$1-parse.log
+java -mx200m -cp $parser_path/*:  edu.stanford.nlp.parser.lexparser.LexicalizedParser -retainTMPSubcategories -outputFormat "oneline"   $parser_path/edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz $* 1> $1-parsed.out 2>$1-parse.log
+
 
 cd $pres_path
 python prog/constituency-to-conll.py $1-parsed.out > $1.conll
