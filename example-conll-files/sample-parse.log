@@ -4,4 +4,4 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 Parsing file: /home/sriram/largest-chunk/conll-tree-tools/example-conll-files/sample
 Parsing [sent. 1 len. 20]: I have been working for last five years and she has been doing it for last ten years . .
 Parsed file: /home/sriram/largest-chunk/conll-tree-tools/example-conll-files/sample [1 sentences].
-Parsed 20 words in 1 sentences (75.47 wds/sec; 3.77 sents/sec).
+Parsed 20 words in 1 sentences (72.46 wds/sec; 3.62 sents/sec).

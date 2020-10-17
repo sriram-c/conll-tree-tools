@@ -164,7 +164,7 @@ def largest_np_pp(const_tree):
         total_chunks[num] = key.strip()+':'+np_pp_dic[key]
     for key in vp_dic:
         num = re.match(r'[^\d]+(\d+)',key)[1]
-        total_chunks[num] = key.strip()+':'+vp_dic[key]
+        total_chunks[num] = key.strip()+'(Verbal_part_only)'+':'+vp_dic[key]
 
 
 
