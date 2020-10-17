@@ -1,0 +1,10 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Parsing file: /home/sriram/largest-chunk/conll-tree-tools/example-conll-files/rel-clause-const
+Parsing [sent. 1 len. 198]: ( ROOT ( S ( S ( NP ( PRP It ) ) ( VP ( VBZ is ) ( NP ( NP ( DT those ) ( NNS templates ) ) ( SBAR ( WHNP ( WDT which ) ) ( S ( VP ( VBP make ) ( S ( NP ( NP ( NN deployment ) ) ( PP ( IN of ) ( NP ( NP ( NN machine ) ( NN learning ) ) ( PP ( IN in ) ( NP ( NN practice ) ) ) ) ) ) ( ADJP ( JJ easy ) ) ) ) ) ) ) ) ) ( CC and ) ( S ( NP ( PRP$ our ) ( NN discussion ) ) ( VP ( MD will ) ( ADVP ( RB largely ) ) ( VP ( VB focus ) ( PP ( IN on ) ( NP ( NP ( DT a ) ( NN choice ) ( NN set ) ) ( PP ( IN of ) ( NP ( JJ such ) ( NNS problems ) ) ) ) ) ) ) ) ( . . ) ) )
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at edu.stanford.nlp.parser.lexparser.LexicalizedParserQuery.parseAndReport(LexicalizedParserQuery.java:706)
+	at edu.stanford.nlp.parser.lexparser.ParseFiles.parseFiles(ParseFiles.java:215)
+	at edu.stanford.nlp.parser.lexparser.ParseFiles.parseFiles(ParseFiles.java:75)
+	at edu.stanford.nlp.parser.lexparser.LexicalizedParser.main(LexicalizedParser.java:1491)
