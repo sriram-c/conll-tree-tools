@@ -1,5 +1,9 @@
 ## Finding Largest NP|PP|SBAR|S from a sentence
 
+Need to install bs4,lxml python libraries
+pip install bs4
+pip install lxml
+
 ```
 sh run-find-chunks.sh file
 ```
