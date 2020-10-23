@@ -1,0 +1,120 @@
+<node value="ROOT">
+  <node value="S">
+    <node value="PP">
+      <node value="IN">
+        <leaf value="For"/>
+      </node>
+      <node value="NP">
+        <node value="NN">
+          <leaf value="instance"/>
+        </node>
+      </node>
+    </node>
+    <node value=",">
+      <leaf value=","/>
+    </node>
+    <node value="NP">
+      <node value="PRP">
+        <leaf value="it"/>
+      </node>
+    </node>
+    <node value="VP">
+      <node value="VBZ">
+        <leaf value="is"/>
+      </node>
+      <node value="ADVP">
+        <node value="RB">
+          <leaf value="probably"/>
+        </node>
+      </node>
+      <node value="NP">
+        <node value="DT">
+          <leaf value="a"/>
+        </node>
+        <node value="JJ">
+          <leaf value="bad"/>
+        </node>
+        <node value="NN">
+          <leaf value="idea"/>
+        </node>
+      </node>
+      <node value="S">
+        <node value="VP">
+          <node value="TO">
+            <leaf value="to"/>
+          </node>
+          <node value="VP">
+            <node value="VB">
+              <leaf value="repeat"/>
+            </node>
+            <node value="NP">
+              <node value="NN">
+                <leaf value="T1"/>
+              </node>
+            </node>
+            <node value="PP">
+              <node value="IN">
+                <leaf value="without"/>
+              </node>
+              <node value="NP">
+                <node value="NNS">
+                  <leaf value="changes"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node value=",">
+        <leaf value=","/>
+      </node>
+      <node value="SBAR">
+        <node value="IN">
+          <leaf value="since"/>
+        </node>
+        <node value="S">
+          <node value="NP">
+            <node value="PRP">
+              <leaf value="it"/>
+            </node>
+          </node>
+          <node value="VP">
+            <node value="MD">
+              <leaf value="might"/>
+            </node>
+            <node value="VP">
+              <node value="VB">
+                <leaf value="perform"/>
+              </node>
+              <node value="NP">
+                <node value="DT">
+                  <leaf value="the"/>
+                </node>
+                <node value="JJ">
+                  <leaf value="same"/>
+                </node>
+                <node value="JJ">
+                  <leaf value="diagnostic"/>
+                </node>
+                <node value="NN">
+                  <leaf value="mistake"/>
+                </node>
+              </node>
+              <node value="ADVP">
+                <node value="RB">
+                  <leaf value="as"/>
+                </node>
+                <node value="RB">
+                  <leaf value="before"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node value=".">
+      <leaf value="."/>
+    </node>
+  </node>
+</node>

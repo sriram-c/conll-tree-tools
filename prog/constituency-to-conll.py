@@ -1,5 +1,6 @@
 import re
 import sys
+import string
 def parenthetic_contents(string,sen_len):
     """Generate parenthesized contents in string as pairs (level, contents)."""
     stack = []
@@ -20,7 +21,7 @@ def parenthetic_contents(string,sen_len):
             wd2 = stack_wd[-2]
             wd1 = stack_wd[-1]
 
-            if(re.search('[0-9]',wd2)):
+            if(re.search('###[0-9]',wd2)):
                 sent_dic[j]=wd1+'\t'+wd2
                 j += 1
                 wd1 = stack_wd.pop()
@@ -40,7 +41,7 @@ def parenthetic_contents(string,sen_len):
                 wd1 = stack_wd.pop()
                 wd2 = stack_wd.pop()
                 wd3 = stack_wd[-1]
-                if(re.search('[0-9]',wd1)):
+                if(re.search('###[0-9]',wd1)):
                     #sent_dic[j]=wd2+'\t'+wd3
                     sent_dic[j]=wd1+'_'+wd2+'\t'+wd3
                     j += 1
@@ -51,7 +52,7 @@ def parenthetic_contents(string,sen_len):
         else:
             #http://www.surdeanu.info/mihai/teaching/ista555-fall13/readings/PennTreebankConstituents.html
             if(re.match(r'^NP|WHNP|VP|PP|WHPP|ADJP|WHADJP|ADVP|WHAVP|X|SBAR|NAC|NML|CONJP|FRAG|INTJ|LST|NAC|NX|QP|PRC|PRN|PRT|QP|RRC|UCP|ROOT|S$',wd)):
-                    stack_wd.append(wd+str(count))
+                    stack_wd.append(wd+'###'+str(count))
                     count += 1
             else:
                 stack_wd.append(wd)
@@ -87,28 +88,28 @@ for sent in sents:
     hd = {}
     for key in sorted (sent_dic):
         idx = key
-        all_val = sent_dic[key]
         pos_val = sent_dic[key].split('\t')[0].strip()
-        head_val = sent_dic[key].split('\t')[1].strip()
-        hd[pos_val] = idx
+        pos_val1 = re.sub(r'###','',pos_val)
+        hd[pos_val1] = idx
 
     for key in sorted (sent_dic):
         
         idx = key
-        all_val = sent_dic[key]
         pos_val = sent_dic[key].split('\t')[0]
+        pos_val1 = re.sub(r'###','',pos_val)
         head_val = sent_dic[key].split('\t')[1].strip()
+        head_val1 = re.sub(r'###','',head_val)
 
-        if(len(pos_val.split('_')) > 1):
-            word = pos_val.split('_')[0]
-            pos = pos_val.split('_')[1]
+        if(len(pos_val1.split('_')) > 1):
+            word = pos_val1.split('_')[0]
+            pos = pos_val1.split('_')[1]
         else:
             word = '_'
-            pos = pos_val.split('_')[0]
+            pos = pos_val1.split('_')[0]
 
 
-        if(head_val != 'ROOT0'):
-            print(idx,'\t',word,'\t',pos,'\t_','\t_','\t_','\t_\t',hd[head_val],'\tmother','\t',str(hd[head_val])+':mother','\t_')
+        if(head_val1 != 'ROOT0'):
+            print(idx,'\t',word,'\t',pos,'\t_','\t_','\t_','\t_\t',hd[head_val1],'\tmother','\t',str(hd[head_val1])+':mother','\t_')
         else:
             print(idx,'\t',word,'\t',pos,'\t_','\t_','\t_','\t_\t0','\tmother','\t','0:mother','\t_')
 

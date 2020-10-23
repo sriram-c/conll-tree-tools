@@ -1,0 +1,1 @@
+(ROOT (S (S (VP (TO To) (VP (VB achieve) (NP (DT this) (NN goal))))) (, ,) (NP (DT a) (NN search) (NN engine)) (VP (VBZ needs) (S (VP (TO to) (VP (`` ') (VB know) ('' ')))) (SBAR (SBAR (WHNP (WDT which)) (S (NP (NNS pages)) (VP (VBP are) (ADJP (JJ relevant))))) (CC and) (SBAR (WHNP (WDT which)) (S (NP (NNS pages)) (VP (VBP match) (NP (DT the) (NN query))))))) (. .)))

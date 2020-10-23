@@ -1,0 +1,54 @@
+<node value="ROOT">
+  <node value="S">
+    <node value="S">
+      <node value="NP">
+        <node value="NNP">
+          <leaf value="Ram"/>
+        </node>
+      </node>
+      <node value="VP">
+        <node value="VBD">
+          <leaf value="went"/>
+        </node>
+        <node value="PP">
+          <node value="IN">
+            <leaf value="to"/>
+          </node>
+          <node value="NP">
+            <node value="NNP">
+              <leaf value="Bombay"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node value="CC">
+      <leaf value="and"/>
+    </node>
+    <node value="S">
+      <node value="NP">
+        <node value="NNP">
+          <leaf value="Mohan"/>
+        </node>
+      </node>
+      <node value="VP">
+        <node value="VBD">
+          <leaf value="went"/>
+        </node>
+        <node value="PP">
+          <node value="IN">
+            <leaf value="to"/>
+          </node>
+          <node value="NP">
+            <node value="NNP">
+              <leaf value="Calcutta"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node value=".">
+      <leaf value="."/>
+    </node>
+  </node>
+</node>

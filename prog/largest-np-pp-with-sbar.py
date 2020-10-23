@@ -40,6 +40,7 @@ def largest_np_pp(const_tree):
     #w_id = sen.split()
 
     np_pp_dic = {}
+    np_pp_dic_id = {}
     sbar_dic = {}
     sbar_dic_id = {}
     s_dic = {}
@@ -58,7 +59,8 @@ def largest_np_pp(const_tree):
             #for j in range(0,len(head_list)):
                 c_pos = pos_id[head_list[j-1] - 1].strip()
                 pos_list.append(c_pos)
-                if re.search(r'S', c_pos) and c_pos != 'S1':
+                if re.search(r'S\d+', c_pos) and c_pos != 'S1':
+                    print(c_pos)
                     found_sbar = 1
                     if (c_pos in s_dic):
                         s_dic[c_pos] = s_dic[c_pos] + ' ' + w_id[i].strip()
@@ -110,8 +112,10 @@ def largest_np_pp(const_tree):
                     if re.search(r'NP|PP', c_pos):
                         if(c_pos in np_pp_dic):
                             np_pp_dic[c_pos] = np_pp_dic[c_pos] + ' '+w_id[i].strip()
+                            np_pp_dic_id[c_pos] = np_pp_dic_id[c_pos] + ',' + str(i)
                         else:
                             np_pp_dic[c_pos] = w_id[i].strip()
+                            np_pp_dic_id[c_pos] = str(head_list[j-1]) + ',' + str(i)
                         break
 
     if(len(sbar_dic_id) > 0):
@@ -119,18 +123,19 @@ def largest_np_pp(const_tree):
            ids = sbar_dic_id[key].split(',')[1:]
            sbar_id = sbar_dic_id[key].split(',')[0]
 
-           #print(key, sbar_dic[key])
 
            for i in range(0, len(ids)):
                if (w_id[int(ids[i])].strip() != '_'):
                    head_list = get_ancestor1(A_id, H_id, int(ids[i]))
                    for j in range(len(head_list), 0, -1):
-                       c_pos = pos_id[head_list[j - 1] - 1]
+                       c_pos = pos_id[head_list[j - 1] - 1].strip()
                        if re.search(r'NP|PP', c_pos) and head_list[j-1] < int(sbar_id):
                            if (c_pos in np_pp_dic):
                                np_pp_dic[c_pos] = np_pp_dic[c_pos] + ' ' + w_id[int(ids[i])].strip()
+                               np_pp_dic_id[c_pos] = np_pp_dic_id[c_pos] + ',' + str(i)
                            else:
                                np_pp_dic[c_pos] = w_id[int(ids[i])].strip()
+                               np_pp_dic_id[c_pos] = str(head_list[j-1]) + ',' + str(i)
                            break
 
     if(len(s_dic_id) > 0):
@@ -138,21 +143,28 @@ def largest_np_pp(const_tree):
            ids = s_dic_id[key].split(',')[1:]
            s_id = s_dic_id[key].split(',')[0]
 
-           #print(key, s_dic[key])
 
            for i in range(0, len(ids)):
                if (w_id[int(ids[i])].strip() != '_'):
                    head_list = get_ancestor1(A_id, H_id, int(ids[i]))
                    for j in range(len(head_list), 0, -1):
-                       c_pos = pos_id[head_list[j - 1] - 1]
+                       c_pos = pos_id[head_list[j - 1] - 1].strip()
                        if re.search(r'NP|PP', c_pos) and head_list[j-1] < int(s_id):
+                           if(c_pos == 'NP21'):
+                                print('@@@@@')
+                                print(c_pos,head_list,s_id,np_pp_dic,np_pp_dic_id,i)
+                                print('@@@@@')
                            if (c_pos in np_pp_dic):
                                np_pp_dic[c_pos] = np_pp_dic[c_pos] + ' ' + w_id[int(ids[i])].strip()
+                               np_pp_dic_id[c_pos] = np_pp_dic_id[c_pos] + ',' + str(i)
                            else:
                                np_pp_dic[c_pos] = w_id[int(ids[i])].strip()
+                               np_pp_dic_id[c_pos] = str(head_list[j-1]) + ',' + str(i)
                            break
 
     total_chunks = {}
+    total_chunks_id = {}
+
     for key in sbar_dic:
         num = re.match(r'[^\d]+(\d+)',key)[1]
         total_chunks[num] = key.strip()+':'+sbar_dic[key]
@@ -167,19 +179,46 @@ def largest_np_pp(const_tree):
         total_chunks[num] = key.strip()+'(Verbal_part_only)'+':'+vp_dic[key]
 
 
+    for key in sbar_dic_id:
+        num = re.match(r'[^\d]+(\d+)',key)[1]
+        total_chunks_id[num] = key.strip()+':'+sbar_dic_id[key]
+    for key in s_dic_id:
+        num = re.match(r'[^\d]+(\d+)',key)[1]
+        total_chunks_id[num] = key.strip()+':'+s_dic_id[key]
+    for key in np_pp_dic_id:
+        num = re.match(r'[^\d]+(\d+)',key)[1]
+        total_chunks_id[num] = key.strip()+':'+np_pp_dic_id[key]
+    for key in vp_dic_id:
+        num = re.match(r'[^\d]+(\d+)',key)[1]
+        total_chunks_id[num] = key.strip()+'(Verbal_part_only)'+':'+vp_dic_id[key]
 
 
 
 
-    return (total_chunks)
 
 
+    return (total_chunks,total_chunks_id)
 
 
 if __name__ == "__main__":
 
     const_tree = pd.read_csv(sys.argv[1], sep='\t', header=None)
-    total_chunks = largest_np_pp(const_tree)
+    total_chunks,total_chunks_id = largest_np_pp(const_tree)
     int_total_chunks = {int(k) : v for k, v in total_chunks.items()}
+    int_total_chunks_id = {int(k) : v for k, v in total_chunks_id.items()}
+
     for key in sorted(int_total_chunks):
         print(key,int_total_chunks[key])
+
+
+    print('-------')
+
+    for key in sorted(int_total_chunks):
+        print(key,int_total_chunks_id[key])
+        
+
+
+
+
+
+

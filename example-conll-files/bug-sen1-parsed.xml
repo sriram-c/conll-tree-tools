@@ -1,0 +1,120 @@
+<node value="ROOT">
+  <node value="S">
+    <node value="S">
+      <node value="VP">
+        <node value="TO">
+          <leaf value="To"/>
+        </node>
+        <node value="VP">
+          <node value="VB">
+            <leaf value="achieve"/>
+          </node>
+          <node value="NP">
+            <node value="DT">
+              <leaf value="this"/>
+            </node>
+            <node value="NN">
+              <leaf value="goal"/>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node value=",">
+      <leaf value=","/>
+    </node>
+    <node value="NP">
+      <node value="DT">
+        <leaf value="a"/>
+      </node>
+      <node value="NN">
+        <leaf value="search"/>
+      </node>
+      <node value="NN">
+        <leaf value="engine"/>
+      </node>
+    </node>
+    <node value="VP">
+      <node value="VBZ">
+        <leaf value="needs"/>
+      </node>
+      <node value="S">
+        <node value="VP">
+          <node value="TO">
+            <leaf value="to"/>
+          </node>
+          <node value="VP">
+            <node value="``">
+              <leaf value="&apos;"/>
+            </node>
+            <node value="VB">
+              <leaf value="know"/>
+            </node>
+            <node value="&apos;&apos;">
+              <leaf value="&apos;"/>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node value="SBAR">
+        <node value="SBAR">
+          <node value="WHNP">
+            <node value="WDT">
+              <leaf value="which"/>
+            </node>
+          </node>
+          <node value="S">
+            <node value="NP">
+              <node value="NNS">
+                <leaf value="pages"/>
+              </node>
+            </node>
+            <node value="VP">
+              <node value="VBP">
+                <leaf value="are"/>
+              </node>
+              <node value="ADJP">
+                <node value="JJ">
+                  <leaf value="relevant"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node value="CC">
+          <leaf value="and"/>
+        </node>
+        <node value="SBAR">
+          <node value="WHNP">
+            <node value="WDT">
+              <leaf value="which"/>
+            </node>
+          </node>
+          <node value="S">
+            <node value="NP">
+              <node value="NNS">
+                <leaf value="pages"/>
+              </node>
+            </node>
+            <node value="VP">
+              <node value="VBP">
+                <leaf value="match"/>
+              </node>
+              <node value="NP">
+                <node value="DT">
+                  <leaf value="the"/>
+                </node>
+                <node value="NN">
+                  <leaf value="query"/>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node value=".">
+      <leaf value="."/>
+    </node>
+  </node>
+</node>

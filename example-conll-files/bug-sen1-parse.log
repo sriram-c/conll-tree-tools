@@ -1,0 +1,7 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Parsing file: example-conll-files/bug-sen1
+Parsing [sent. 1 len. 24]: To achieve this goal , a search engine needs to ' know ' which pages are relevant and which pages match the query .
+Parsed file: example-conll-files/bug-sen1 [1 sentences].
+Parsed 24 words in 1 sentences (53.81 wds/sec; 2.24 sents/sec).

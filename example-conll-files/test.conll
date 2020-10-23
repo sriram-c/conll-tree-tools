@@ -1,0 +1,23 @@
+1 	 Ram 	 NNP 	_ 	_ 	_ 	_	 11 	mother 	 11:mother 	_
+2 	 went 	 VBD 	_ 	_ 	_ 	_	 14 	mother 	 14:mother 	_
+3 	 to 	 IN 	_ 	_ 	_ 	_	 13 	mother 	 13:mother 	_
+4 	 Bombay 	 NNP 	_ 	_ 	_ 	_	 12 	mother 	 12:mother 	_
+5 	 and 	 CC 	_ 	_ 	_ 	_	 21 	mother 	 21:mother 	_
+6 	 Mohan 	 NNP 	_ 	_ 	_ 	_	 16 	mother 	 16:mother 	_
+7 	 went 	 VBD 	_ 	_ 	_ 	_	 19 	mother 	 19:mother 	_
+8 	 to 	 IN 	_ 	_ 	_ 	_	 18 	mother 	 18:mother 	_
+9 	 Calcutta 	 NNP 	_ 	_ 	_ 	_	 17 	mother 	 17:mother 	_
+10 	 . 	 . 	_ 	_ 	_ 	_	 21 	mother 	 21:mother 	_
+11 	 _ 	 NP3 	_ 	_ 	_ 	_	 15 	mother 	 15:mother 	_
+12 	 _ 	 NP6 	_ 	_ 	_ 	_	 13 	mother 	 13:mother 	_
+13 	 _ 	 PP5 	_ 	_ 	_ 	_	 14 	mother 	 14:mother 	_
+14 	 _ 	 VP4 	_ 	_ 	_ 	_	 15 	mother 	 15:mother 	_
+15 	 _ 	 S2 	_ 	_ 	_ 	_	 21 	mother 	 21:mother 	_
+16 	 _ 	 NP8 	_ 	_ 	_ 	_	 20 	mother 	 20:mother 	_
+17 	 _ 	 NP11 	_ 	_ 	_ 	_	 18 	mother 	 18:mother 	_
+18 	 _ 	 PP10 	_ 	_ 	_ 	_	 19 	mother 	 19:mother 	_
+19 	 _ 	 VP9 	_ 	_ 	_ 	_	 20 	mother 	 20:mother 	_
+20 	 _ 	 S7 	_ 	_ 	_ 	_	 21 	mother 	 21:mother 	_
+21 	 _ 	 S1 	_ 	_ 	_ 	_	0 	mother 	 0:mother 	_
+
+

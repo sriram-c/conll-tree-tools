@@ -1,0 +1,7 @@
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Parsing file: example-conll-files/test
+Parsing [sent. 1 len. 10]: Ram went to Bombay and Mohan went to Calcutta .
+Parsed file: example-conll-files/test [1 sentences].
+Parsed 10 words in 1 sentences (64.52 wds/sec; 6.45 sents/sec).
