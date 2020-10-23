@@ -8,7 +8,7 @@ with open(sys.argv[1]) as fp:
 root = soup.find_all(value='ROOT')[0]
 
 
-def find_leaf(tag):
+def find_leaf(tag, phrase):
     tmp_wd = []
 
     if(tag['value'] == 'CC'):
@@ -54,10 +54,10 @@ def process_tag(tag, phrase):
 
 
             elif(re.match(r'CC',tag['value'])):
-                find_leaf(tag)
+                find_leaf(tag, phrase)
 
             else:
-                find_leaf(tag)
+                find_leaf(tag, phrase)
                 for tag1 in tag.contents:
                     if (isinstance(tag1, Tag)):
                         process_tag(tag1, phrase)
@@ -68,4 +68,7 @@ for ch in root.contents:
         process_tag(ch,phrase)
 
 for p in phrase:
-    print(p[0],':',' '.join(p[1]))
+    if(re.match(r'CC',p[0])):
+        print(p[0], ':', p[1],'-', p[3], '-', p[2])
+    else:
+        print(p[0],':',' '.join(p[1]))
